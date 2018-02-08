@@ -1,0 +1,17 @@
+{
+  "name": "face_wall",
+  "version": "0.0.1",
+  "description": "in a HTML page, show last image added to a directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "express": "^4.16.2",
+    "jsdom": "^11.3.0",
+    "socket.io": "^2.0.4"
+  }
+}

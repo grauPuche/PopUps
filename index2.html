@@ -1,0 +1,43 @@
+<html>
+		
+		<head>
+			<script src="/lib/socket.io.js"></script>
+			<script src="/lib/jquery-3.2.1.min.js"></script>
+			<style>
+				body {
+					background-color: black;
+				} 
+				img {
+					height: 210px;
+					width: 210px;
+					float: left;
+				}
+				#wrapper {
+					width: 1900px;
+					margin: auto;
+				}
+			</style>
+			
+		</head>
+		
+		<body>
+			<div id="wrapper">
+				<div>
+					<img id="0" src="output/crop/cropped_20171108133320.png">
+				</div>
+			</div>
+			<script>
+					var n = 0
+					var socket = io();
+					socket.on('PATH', function (path) { 
+						// $('#'+n).attr('id',n+1);
+						n++
+						console.log(n);
+						$('<img id="'+n+'"src="'+path+'">').insertBefore('#'+(n-1));
+	
+						console.log(path);
+					});
+				</script>
+		</body>
+		
+		</html>
